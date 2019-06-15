@@ -10,7 +10,7 @@ const { resolve } = require('path');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to the delightful ${chalk.red('generator-dotfiles')} generator!`));
+    this.log(yosay(`Welcome to the delightful ${chalk.red('generator-dotfiles:npmrc')} generator!`));
 
     const prompts = [
       {
