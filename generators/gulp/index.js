@@ -36,6 +36,6 @@ module.exports = class extends Generator {
 
   end() {
     const npmPkg = 'npm install -D del gulp gulp-load-plugins gulp-uglify';
-    console.log(clalk.green(npmPkg));
+    console.log(chalk.green('\n\t' + npmPkg + '\n'));
   }
 };
