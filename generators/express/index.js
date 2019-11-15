@@ -47,7 +47,7 @@ module.exports = class extends Generator {
       'afeiship',
       'configuration-files',
       function(err, cachePath) {
-        const filename = is_mini ? 'server.js' : 'server-with-proxy.js';
+        const filename = is_mini ? 'express.js' : 'express-with-proxy.js';
         this.fs.copy(glob.sync(resolve(cachePath, `express/${filename}`)), this.destinationPath());
         done();
       }.bind(this)
