@@ -1,5 +1,5 @@
 {
-  "name": "generator-dotfiles",
+  "name": "@feizheng/generator-dotfiles",
   "version": "1.0.0",
   "description": "Yeoman generator for dot/configuration files.",
   "homepage": "https://github.com/afeiship/generator-dotfiles",
@@ -18,9 +18,6 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "yeoman-test": "^1.7.0",
-    "yeoman-assert": "^3.1.0",
-    "eslint": "^5.9.0",
     "prettier": "^1.15.2",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
@@ -29,44 +26,12 @@
     "eslint-config-xo": "^0.25.0",
     "jest": "^23.5.0"
   },
-  "engines": {
-    "npm": ">= 4.0.0"
-  },
   "dependencies": {
     "chalk": "^2.1.0",
     "yeoman-generator": "^2.0.1",
     "yeoman-generator-helper": "github:afeiship/yeoman-generator-helper",
     "yeoman-remote": "^1.0.1",
     "yosay": "^2.0.1"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": "error"
-    },
-    "plugins": [
-      "prettier"
-    ]
   },
   "scripts": {},
   "repository": "git@github.com:afeiship/generator-dotfiles.git",

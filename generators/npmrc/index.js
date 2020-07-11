@@ -48,9 +48,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then((props) => {
-      // To access props later use this.props.someAnswer;
       this.props = props;
-      // yoHelper.rewriteProps(props);
     });
   }
 
@@ -62,9 +60,5 @@ module.exports = class extends Generator {
     npmrc.push(`registry=${registry}`);
     this.fs.write(this.destinationPath('.npmrc'), npmrc.join('\n'));
     done();
-  }
-
-  end() {
-    console.log('Enjoy coding~');
   }
 };

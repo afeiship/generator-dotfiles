@@ -26,11 +26,14 @@ module.exports = class extends Generator {
     remote(
       'afeiship',
       'configuration-files',
-      function(err, cachePath) {
+      (err, cachePath) => {
         // copy files:
-        this.fs.copy(glob.sync(resolve(cachePath, 'gulp/*')), this.destinationPath());
+        this.fs.copy(
+          glob.sync(resolve(cachePath, 'gulp/*')),
+          this.destinationPath()
+        );
         done();
-      }.bind(this)
+      }
     );
   }
 
