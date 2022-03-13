@@ -1,39 +1,31 @@
 {
-  "name": "@feizheng/generator-dotfiles",
+  "name": "@jswork/generator-dotfiles",
   "version": "1.0.0",
   "description": "Yeoman generator for dot/configuration files.",
   "homepage": "https://github.com/afeiship/generator-dotfiles",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com",
-    "url": "https://github.com/afeiship"
+    "url": "https://js.work"
   },
   "files": [
     "generators"
   ],
-  "main": "generators/index.js",
   "keywords": [
     "dotfile",
     "config",
     "yeoman-generator"
   ],
-  "devDependencies": {
-    "prettier": "^1.15.2",
-    "husky": "^1.2.0",
-    "lint-staged": "^8.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-config-xo": "^0.25.0",
-    "jest": "^23.5.0"
-  },
   "dependencies": {
+    "@jswork/yeoman-generator-helper": "^1.0.4",
     "chalk": "^2.1.0",
     "yeoman-generator": "^2.0.1",
-    "yeoman-generator-helper": "github:afeiship/yeoman-generator-helper",
     "yeoman-remote": "^1.0.1",
     "yosay": "^2.0.1"
   },
-  "scripts": {},
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
   "repository": "git@github.com:afeiship/generator-dotfiles.git",
   "license": "MIT"
 }
