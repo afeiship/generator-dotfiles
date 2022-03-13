@@ -13,7 +13,7 @@ module.exports = class extends Generator {
   writing() {
     this.fs.copyTpl(
       globby.sync(this.templatePath('**'), { dot: true }),
-      this.templatePath(),
+      this.destinationPath(),
       this.props
     );
   }
