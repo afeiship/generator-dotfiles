@@ -1,8 +1,6 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const glob = require('glob');
-const remote = require('yeoman-remote');
-const { resolve } = require('path');
+const globby = require('globby');
 
 module.exports = class extends Generator {
   prompting() {
@@ -13,17 +11,10 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const done = this.async();
-    remote(
-      'afeiship',
-      'configuration-files',
-      (err, cachePath) => {
-        this.fs.copy(
-          glob.sync(resolve(cachePath, '.editorconfig')),
-          this.destinationPath()
-        );
-        done();
-      }
+    this.fs.copyTpl(
+      globby.sync(this.templatePath('**'), { dot: true }),
+      this.destinationPath(),
+      this.props
     );
   }
 };
