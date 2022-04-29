@@ -10,6 +10,7 @@ npm link
 
 ## generators
 > List all generators. 
+
 | name                               | params             | description                   |
 | ---------------------------------- | ------------------ | ----------------------------- |
 | yo @jswork/dotfiles:npmrc          | lockfile, registry | Generate .npmrc file          |
