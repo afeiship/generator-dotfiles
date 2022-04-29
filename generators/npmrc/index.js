@@ -1,64 +1,20 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const glob = require('glob');
-const chalk = require('chalk');
-const yosay = require('yosay');
-const yoHelper = require('yeoman-generator-helper');
-const remote = require('yeoman-remote');
-const { resolve } = require('path');
+const globby = require('globby');
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to the delightful ${chalk.red('generator-dotfiles:npmrc')} generator!`));
-
-    const prompts = [
-      {
-        type: 'list',
-        name: 'package_lock',
-        message: 'Pakcage lock file (default: false)?',
-        default: false,
-        choices: [
-          {
-            name: 'I want to have package-lock.json file.',
-            value: true
-          },
-          {
-            name: "I don't want to have package-lock.json file.",
-            value: false
-          }
-        ]
-      },
-      {
-        type: 'list',
-        name: 'registry',
-        message: 'Select npm registry?(default: taobao)',
-        default: 'taobao',
-        choices: [
-          {
-            name: 'taobao.org',
-            value: 'https://registry.npm.taobao.org'
-          },
-          {
-            name: 'npm.org',
-            value: 'https://registry.npmjs.org'
-          }
-        ]
-      }
-    ];
-
+    const prompts = [];
     return this.prompt(prompts).then((props) => {
       this.props = props;
     });
   }
 
   writing() {
-    const done = this.async();
-    const { package_lock, registry } = this.props;
-    const npmrc = ['sass_binary_site=https://npm.taobao.org/mirrors/node-sass/'];
-    npmrc.push(`package-lock=${package_lock}`);
-    npmrc.push(`registry=${registry}`);
-    this.fs.write(this.destinationPath('.npmrc'), npmrc.join('\n'));
-    done();
+    this.fs.copyTpl(
+      globby.sync(this.templatePath('**'), { dot: true }),
+      this.destinationPath(),
+      this.props
+    );
   }
 };
