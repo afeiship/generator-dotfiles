@@ -3,7 +3,6 @@ const Generator = require('yeoman-generator');
 const globby = require('globby');
 
 // yo @jswork/dotfiles:prettier --ideable
-
 module.exports = class extends Generator {
   writing() {
     const pattern = this.options.ideable ? '**' : '.pre*';
