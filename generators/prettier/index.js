@@ -4,15 +4,22 @@ const globby = require('globby');
 
 module.exports = class extends Generator {
   prompting() {
-    const prompts = [];
-    return this.prompt(prompts).then((props) => {
-      this.props = props;
-    });
+    const prompts = [
+      {
+        type: 'confirm',
+        name: 'has_idea',
+        message: 'Idea settigns include?'
+      }
+    ];
+
+    return this.prompt(prompts).then((props) => (this.props = props));
   }
 
   writing() {
+    const pattern = this.props.has_idea ? '**' : '.pre*';
+    const opts = { dot: true };
     this.fs.copyTpl(
-      globby.sync(this.templatePath('**'), { dot: true }),
+      globby.sync(this.templatePath(pattern), opts),
       this.destinationPath(),
       this.props
     );
