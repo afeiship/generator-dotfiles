@@ -8,6 +8,6 @@ describe('module:npmrc', () => {
   test('creates npmrc files', async () => {
     await helpers.run(GEN_PATH);
     // normal files
-    assert.file(['.npmrc']);
+    assert.file(['.npmrc', '.npmignore']);
   });
 });
