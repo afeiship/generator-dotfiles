@@ -17,7 +17,7 @@ module.exports = class extends Generator {
   installDeps() {
     const pkgJson = {
       devDependencies: {
-        prettier: '^2.5.1'
+        prettier: '^2.6.2'
       }
     };
     this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
