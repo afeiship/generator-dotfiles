@@ -19,3 +19,4 @@ npm link
 | yo @jswork/dotfiles:ncu            | -                  | Generate .ncurc.json file     |
 | yo @jswork/dotfiles:browserslistrc | -                  | Generate .browserslistrc file |
 | yo @jswork/dotfiles:gitignore      | -                  | Generate .gitignore file      |
+| yo @jswork/dotfiles:dockerignore   | -                  | Generate .dockerignore file      |
