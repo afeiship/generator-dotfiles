@@ -2,10 +2,10 @@
 const Generator = require('yeoman-generator');
 const globby = require('globby');
 
-// yo @jswork/dotfiles:prettier --ideable
+// yo @jswork/dotfiles:prettier --idea
 module.exports = class extends Generator {
   writing() {
-    const pattern = this.options.ideable ? '**' : '.pre*';
+    const pattern = this.options.idea ? '**' : '.pre*';
     const opts = { dot: true };
     this.fs.copyTpl(
       globby.sync(this.templatePath(pattern), opts),
@@ -14,12 +14,7 @@ module.exports = class extends Generator {
     );
   }
 
-  installDeps() {
-    const pkgJson = {
-      devDependencies: {
-        prettier: '^2.6.2'
-      }
-    };
-    this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
+  async installDeps() {
+    await this.addDevDependencies(['prettier']);
   }
 };
