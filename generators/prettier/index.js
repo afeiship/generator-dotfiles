@@ -13,8 +13,4 @@ module.exports = class extends Generator {
       this.props
     );
   }
-
-  async installDeps() {
-    await this.addDevDependencies(['prettier']);
-  }
 };
