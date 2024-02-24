@@ -1,22 +1,39 @@
-# generator-dotfiles
-> Yeoman generator for dot/configuration files.
+# read-pkg-json
+> Read package.json file.
+
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
 ## installation
 ```shell
-git clone git@github.com:afeiship/generator-dotfiles.git
-cd generator-dotfiles
-npm link
+npm install @jswork/read-pkg-json
 ```
 
-## generators
-> List all generators. 
+## usage
+```js
+import readPkgJson from '@jswork/read-pkg-json';
 
-| name                               | params             | description                   |
-| ---------------------------------- | ------------------ | ----------------------------- |
-| yo @jswork/dotfiles:npmrc          | lockfile, registry | Generate .npmrc file          |
-| yo @jswork/dotfiles:prettier       | -                  | Generate .prettierrc file     |
-| yo @jswork/dotfiles:editorconfig   | -                  | Generate .editorconfig file   |
-| yo @jswork/dotfiles:ncu            | -                  | Generate .ncurc.json file     |
-| yo @jswork/dotfiles:browserslistrc | -                  | Generate .browserslistrc file |
-| yo @jswork/dotfiles:gitignore      | -                  | Generate .gitignore file      |
-| yo @jswork/dotfiles:dockerignore   | -                  | Generate .dockerignore file      |
+// usage goes here.
+```
+
+## types
+```ts
+/// <reference types="@jswork/read-pkg-json/global.d.ts" />
+```
+
+## license
+Code released under [the MIT license](https://github.com/afeiship/read-pkg-json/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/read-pkg-json
+[version-url]: https://npmjs.org/package/@jswork/read-pkg-json
+
+[license-image]: https://img.shields.io/npm/l/@jswork/read-pkg-json
+[license-url]: https://github.com/afeiship/read-pkg-json/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/read-pkg-json
+[size-url]: https://github.com/afeiship/read-pkg-json/blob/master/dist/index.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/read-pkg-json
+[download-url]: https://www.npmjs.com/package/@jswork/read-pkg-json

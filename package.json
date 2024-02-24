@@ -1,26 +1,17 @@
 {
-  "name": "@jswork/generator-dotfiles",
+  "name": "@jswork/read-pkg-json",
   "version": "1.0.0",
-  "description": "Yeoman generator for dot/configuration files.",
-  "homepage": "https://github.com/afeiship/generator-dotfiles",
-  "author": {
-    "name": "afei",
-    "email": "1290657123@qq.com",
-    "url": "https://js.work"
+  "description": "Read package.json file.",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "release": "release-it"
   },
-  "files": [
-    "generators"
-  ],
-  "keywords": [
-    "dotfile",
-    "config",
-    "yeoman-generator"
-  ],
-  "dependencies": {
-    "@jswork/yeoman-generator": "^1.0.3",
-    "chalk": "^2.1.0",
-    "yosay": "^2.0.1"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
-  "repository": "git@github.com:afeiship/generator-dotfiles.git",
-  "license": "MIT"
+  "dependencies": {}
 }
