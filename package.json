@@ -1,6 +1,6 @@
 {
   "name": "@jswork/read-pkg-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read package.json file.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -13,5 +13,12 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "cjs",
+    "esm",
+    "json",
+    "pkg",
+    "read"
+  ]
 }
