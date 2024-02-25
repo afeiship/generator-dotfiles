@@ -15,7 +15,10 @@ npm install @jswork/read-pkg-json
 ```js
 import readPkgJson from '@jswork/read-pkg-json';
 
-// usage goes here.
+// 1. current dir
+const pkg = readPkgJson();
+// 2. specify dir
+const pkg = readPkgJson('path/to/your/project');
 ```
 
 ## types
