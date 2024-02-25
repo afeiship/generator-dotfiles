@@ -1,15 +1,12 @@
 {
   "name": "@jswork/read-pkg-json",
   "version": "1.0.2",
-  "type": "module",
   "description": "Read package.json file.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "browser": "dist/index.umd.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "postbuild": "rollup -c rollup.config.js",
     "test": "jest",
     "release": "release-it"
   },
@@ -33,11 +30,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [
-    "cjs",
-    "esm",
-    "json",
-    "pkg",
-    "read"
-  ]
+  "keywords": ["cjs", "esm", "json", "pkg", "read"]
 }
